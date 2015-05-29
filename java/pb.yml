@@ -1,0 +1,6 @@
+- hosts: java
+  sudo: true
+  roles:
+    - williamyeh.oracle-java
+  vars:
+    java_version: 8

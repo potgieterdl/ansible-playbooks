@@ -1,0 +1,4 @@
+- hosts: git
+  sudo: true
+  roles:
+    - { role: geerlingguy.git }

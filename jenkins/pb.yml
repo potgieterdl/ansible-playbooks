@@ -1,6 +1,6 @@
 - hosts: jenkins
   sudo: true
   vars:
-    jenkins_hostname: jenkins.example.com
+    jenkins_hostname: localhost
   roles:
     - { role: geerlingguy.jenkins }

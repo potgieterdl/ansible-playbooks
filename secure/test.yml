@@ -1,0 +1,7 @@
+- hosts: secure 
+  vars:
+  sudo: true
+  roles:
+    - admin
+  
+

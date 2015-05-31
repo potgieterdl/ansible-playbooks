@@ -1,0 +1,9 @@
+- name: Creating user accounts
+  user: name={{ item.name }} state=present generate_ssh_key=yes shell=/bin/bash
+  with_items: users
+
+- name: Copying over ssh keys
+  authorized_key: "user={{ item.0.name }} key='{{ lookup('file', item.1) }}'"
+  with_subelements:
+     - users
+     - authorized

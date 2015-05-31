@@ -1,0 +1,14 @@
+- hosts: secure 
+  sudo: true
+  vars:
+    security_sudoers_passworded: []
+    security_sudoers_passwordless:
+      - derick
+      - ansible
+    security_ssh_port: 22
+    security_autoupdate_enabled: true
+  roles:
+    - admin
+    - { role: geerlingguy.firewall }
+    - { role: geerlingguy.security }
+

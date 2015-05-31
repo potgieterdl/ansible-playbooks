@@ -1,0 +1,9 @@
+- hosts: tomcat
+  sudo: true
+  vars:
+    - tomcat_version: 8.0.23
+    - tomcat_user_home: "/srv/tomcat"
+    - tomcat_install_base: "/opt/appserver/tomcat/tomcat-{{ tomcat_version }}"
+    - tomcat_redis_sha256sum: c98b19a1edaaef2859991f304d0ec8f29c5ccacc6d63a0bc8bf7078d63191a38
+  roles:
+    - { role: groover.tomcat }

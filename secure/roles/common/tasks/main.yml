@@ -1,0 +1,10 @@
+- name: set timezone to Africa/Johannesburg
+  copy:
+    src=etc/timezone
+    dest=/etc/timezone
+
+- name: Update apt cache
+  apt: update_cache=yes
+
+- name: Upgrade all safe packages
+  apt: upgrade=safe

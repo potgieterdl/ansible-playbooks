@@ -1,0 +1,9 @@
+- hosts: nexus
+  vars:
+    version: 2.10.0
+    unpackaged_version: 2.10.0-02
+    base_dir: /opt
+    home: /opt/nexus
+    data_dir: /data
+  roles:
+    - nexus

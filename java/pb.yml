@@ -1,6 +1,6 @@
 - hosts: java
   sudo: true
   roles:
-    - williamyeh.oracle-java
+    - markwatson.java8-oracle
   vars:
     java_version: 8
